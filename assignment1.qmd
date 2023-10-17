@@ -1,7 +1,35 @@
 ---
 title: "Assignment 1"
-date: "2022-10-01"
+date: "2022-10-26"
 ---
+
+# ABOUT ME
+
+Greetings! I'm **SEZER TÜRKMEN**, a software developer whose journey spans the realms of architecture and coding. In a nutshell:
+
+### From Architect to Code Creator: My Transition
+
+I initially ventured into the world of architecture, my first passion. My studies took me to Italy, where I delved into multi-scale architecture and sustainable design, honing my eye for detail and love for harmonious structures.
+
+After working as an architect for a considerable period, I felt the magnetic pull towards coding. The allure of shaping digital landscapes was irresistible, prompting a career shift.
+
+### Mastering Full Stack Development
+
+As a software developer, I immersed myself in coding, mastering Java and venturing into full-stack development. I used technologies like Spring Boot and React to craft dynamic, user-friendly applications. Kubernetes and Docker added efficiency and scalability to my toolkit, bridging the worlds of traditional and digital architecture.
+
+My journey is guided by the belief in perpetual learning. I attended a coding bootcamp to refine my skills and gain practical insights, cementing my passion for coding. As a software developer, I enjoy creating elegant, user-centric applications.
+
+Currently, I'm pursuing a master's in Information Technologies at MEF University, ensuring my knowledge stays cutting-edge.
+
+### Life Beyond Tech
+
+Outside of coding and architecture, I find joy in cooking, a creative outlet where flavors and textures are my canvas. Staying active is another passion. Whether it's hitting the gym or enjoying indoor cycling with a spirited playlist, I cherish the rhythm and precision of physical activity.
+
+### The Future Awaits
+
+I'm Sezer Türkmen, a full-stack developer, architect, and a lover of life. My mission is to blend creativity and technology, one line of code at a time. Thank you for getting to know me!
+
+[![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezerlucianturkmen/) [![Medium Badge](https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white&color=071A2C)](https://medium.com/@sezerlucianturkmen) [![Instagram Badge](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white&color=071A2C)](https://www.instagram.com/sezer.who/)
 
 This is a template example qmd output page. You may see an example R code below.
 
