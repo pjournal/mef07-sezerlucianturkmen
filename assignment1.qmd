@@ -1,11 +1,19 @@
 ---
 title: "Assignment 1"
-date: "2022-10-26"
+author: "Sezer Turkmen"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 1
+editor: visual
 ---
 
-# ABOUT ME
+# \| ABOUT ME
 
-Greetings! I'm **SEZER TÜRKMEN**, a software developer whose journey spans the realms of architecture and coding. In a nutshell:
+<span style="font-size: 20px;">Greetings!</span> 
+
+I'm **Sezer Turkmen**, a software developer whose journey spans the realms of architecture and coding. In a nutshell:
 
 ### From Architect to Code Creator: My Transition
 
@@ -27,9 +35,35 @@ Outside of coding and architecture, I find joy in cooking, a creative outlet whe
 
 ### The Future Awaits
 
-I'm Sezer Türkmen, a full-stack developer, architect, and a lover of life. My mission is to blend creativity and technology, one line of code at a time. Thank you for getting to know me!
+I'm Sezer Turkmen, a full-stack developer, architect, and a lover of life. My mission is to blend creativity and technology, one line of code at a time. Thank you for getting to know me!
 
 [![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezerlucianturkmen/) [![Medium Badge](https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white&color=071A2C)](https://medium.com/@sezerlucianturkmen) [![Instagram Badge](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white&color=071A2C)](https://www.instagram.com/sezer.who/)
+
+# \| GO POSIT
+
+### YouTube Channel \| The open-source data science company for the individual, team and enterprise.
+
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
+</div>
+
+
+[*Teaching R online with RStudio Cloud*](https://www.youtube.com/watch?v=Fja5DIN3uTw&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=127)
+
+I chose to watch the video titled **"Mine Çetinkaya-Rundel \| Teaching R online with RStudio Cloud"** for two main reasons. Firstly, I was interested in learning about effective online teaching methods for the R programming language, commonly used in data science. The video delves into the benefits of using RStudio Cloud for teaching, emphasizing its user-friendly approach. Additionally, I was drawn to the fact that the presenter, Mine Çetinkaya-Rundel, shares a Turkish background with me, which added a unique cultural perspective to the subject matter. The presentation covers tips and best practices for using RStudio Cloud effectively in the classroom, as exporting and grading student work and sharing data files.
+
+# \| SEE DATASET
+
+```{r data , include=FALSE}
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+
+
+```
+
+# \| LEARN THREE R POST
 
 This is a template example qmd output page. You may see an example R code below.
 
