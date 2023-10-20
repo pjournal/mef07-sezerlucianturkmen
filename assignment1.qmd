@@ -6,12 +6,13 @@ output:
   html_document:
     toc: true
     toc_depth: 1
+    number_sections: true
 editor: visual
 ---
 
 # \| ABOUT ME
 
-<span style="font-size: 20px;">Greetings!</span> 
+[Greetings!]{style="font-size: 20px;"}
 
 I'm **Sezer Turkmen**, a software developer whose journey spans the realms of architecture and coding. In a nutshell:
 
@@ -39,35 +40,75 @@ I'm Sezer Turkmen, a full-stack developer, architect, and a lover of life. My mi
 
 [![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezerlucianturkmen/) [![Medium Badge](https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white&color=071A2C)](https://medium.com/@sezerlucianturkmen) [![Instagram Badge](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white&color=071A2C)](https://www.instagram.com/sezer.who/)
 
-# \| GO POSIT
+---
+
+# \| DISCOVER THE POSIT
 
 ### YouTube Channel \| The open-source data science company for the individual, team and enterprise.
 
-<div style="text-align: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
-</div>
-
+::: {style="text-align: center;"}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
+:::
 
 [*Teaching R online with RStudio Cloud*](https://www.youtube.com/watch?v=Fja5DIN3uTw&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=127)
 
 I chose to watch the video titled **"Mine Çetinkaya-Rundel \| Teaching R online with RStudio Cloud"** for two main reasons. Firstly, I was interested in learning about effective online teaching methods for the R programming language, commonly used in data science. The video delves into the benefits of using RStudio Cloud for teaching, emphasizing its user-friendly approach. Additionally, I was drawn to the fact that the presenter, Mine Çetinkaya-Rundel, shares a Turkish background with me, which added a unique cultural perspective to the subject matter. The presentation covers tips and best practices for using RStudio Cloud effectively in the classroom, as exporting and grading student work and sharing data files.
 
-# \| SEE DATASET
+---
 
-```{r data , include=FALSE}
-library(readr)
-library(dplyr)
-library(ggplot2)
+# \| PROPOSE DATASET
+
+### Most Streamed Spotify Songs 2023
+
+
+The 'Most Streamed Spotify Songs 2023' dataset is a fantastic choice for class demos. It offers insights into the music industry by showcasing popular songs and their attributes. Students can explore the science of hit songs, understand their impact through social media analysis, and learn about cross-platform music data. It's engaging and up-to-date, making it an excellent teaching resource.
+
+
+
+```{r include=FALSE}
+
 library(tidyverse)
+library(googledrive)
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(DT)
 
 
+id <- "1nM0Cr-gVFF9UjvxSZXHNfFnrDWIUoTHi"
+total_list <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", id))
+
+
+
+ 
 ```
+```{r most_streamed_spotify_song_2023, include=TRUE}
+
+# Filter out rows with non-numeric values in the 'streams' column
+filtered_spotify_data <- total_list %>%
+   filter(!grepl("[a-zA-Z]", streams))
+
+# Sort the filtered dataset by the 'streams' column in descending order
+sorted_filtered_spotify_data <- filtered_spotify_data %>%
+  arrange(desc(streams))
+
+# Create HTML view of Dataset
+DT::datatable(head(sorted_filtered_spotify_data), editable = list(
+  target = 'row', disable = list(columns = c(1, 3, 4))
+))
+ 
+```
+---
+
+*The* **Most Streamed Spotify Songs 2023** *dataset contains a comprehensive list of the most famous songs of 2023 as listed on Spotify. The dataset offers a wealth of features beyond what is typically available in similar datasets. It provides insights into each song's attributes, popularity, and presence on various music platforms. The dataset includes information such as track name, artist(s) name, release date, Spotify playlists and charts, streaming statistics, Apple Music presence, Deezer presence, Shazam charts, and various audio features.*
+
+---
 
 # \| LEARN THREE R POST
 
 This is a template example qmd output page. You may see an example R code below.
 
-```{r}
+```{r }
 set.seed(1)
 vec1 <- sample(LETTERS,5)
 paste0(vec1,collapse="")
