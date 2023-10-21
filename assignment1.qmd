@@ -47,7 +47,7 @@ I'm Sezer Turkmen, a full-stack developer, architect, and a lover of life. My mi
 ### YouTube Channel \| The open-source data science company for the individual, team and enterprise.
 
 ::: {style="text-align: center;"}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
+<iframe width="680" height="430" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
 :::
 
 [*Teaching R online with RStudio Cloud*](https://www.youtube.com/watch?v=Fja5DIN3uTw&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=127)
@@ -73,16 +73,12 @@ library(dplyr)
 library(readr)
 library(ggplot2)
 library(DT)
-
-
-id <- "1nM0Cr-gVFF9UjvxSZXHNfFnrDWIUoTHi"
-total_list <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", id))
-
-
-
  
 ```
 ```{r most_streamed_spotify_song_2023, include=TRUE}
+# Use Google Drive to connect Dataset with library of 'googleDrive'
+id <- "1nM0Cr-gVFF9UjvxSZXHNfFnrDWIUoTHi"
+total_list <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", id))
 
 # Filter out rows with non-numeric values in the 'streams' column
 filtered_spotify_data <- total_list %>%
@@ -102,14 +98,145 @@ DT::datatable(head(sorted_filtered_spotify_data), editable = list(
 
 *The* **Most Streamed Spotify Songs 2023** *dataset contains a comprehensive list of the most famous songs of 2023 as listed on Spotify. The dataset offers a wealth of features beyond what is typically available in similar datasets. It provides insights into each song's attributes, popularity, and presence on various music platforms. The dataset includes information such as track name, artist(s) name, release date, Spotify playlists and charts, streaming statistics, Apple Music presence, Deezer presence, Shazam charts, and various audio features.*
 
+[GO KAGGLE FOR THIS DATASET](https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/code)
+
 ---
 
 # \| LEARN THREE R POST
 
-This is a template example qmd output page. You may see an example R code below.
 
-```{r }
-set.seed(1)
-vec1 <- sample(LETTERS,5)
-paste0(vec1,collapse="")
+### Creating Stunning Visuals with ggplot2 and ggExtra
+Visualizing the distribution of data is essential for understanding it better. In R, you can use ggplot2 and ggExtra to create informative charts.
+
+ggplot2 is a popular tool for making all sorts of graphs. It's user-friendly and versatile, letting you customize your plots easily.
+
+ggExtra is like an upgrade for ggplot2, designed to make scatterplots and other graphs even more helpful. It adds histograms or density plots to the sides of your main chart, showing you how individual data points are spread out. This extra information helps you grasp your data's patterns.
+
+To use ggplot2 and ggExtra, first, make your main chart with ggplot2, and then use ggExtra's function, ggMarginal(), to include those extra histograms or density plots. This adds depth to your visualizations, helping you understand data distributions better.
+
+In a nutshell, ggplot2 and ggExtra are handy tools in R for exploring and presenting data, making your visualizations more informative and user-friendly.
+
+```{r}
+# library
+library(ggplot2)
+library(ggExtra)
+ 
+# classic plot :
+p <- ggplot(mtcars, aes(x=wt, y=mpg, color=cyl, size=cyl)) +
+      geom_point() +
+      theme(legend.position="none")
+ 
+# Set relative size of marginal plots (main plot 10x bigger than marginals)
+ggMarginal(p, type="histogram", size=10)
+ 
+# Custom marginal plots:
+ggMarginal(p, type="histogram", fill = "slateblue", xparams = list(  bins=10))
+ 
+# Show only marginal plot for x axis
+ggMarginal(p, margins = 'x', color="purple", size=4)
+
+# Very basic chart
+ggplot( mtcars , aes(x=mpg, y=wt)) + 
+  geom_point()
+
+
 ```
+
+[SEE MORE](https://r-graph-gallery.com/)
+
+---
+
+### Text Analysis || Text Mining in R
+Text analysis, or text mining, is a vital tool for extracting insights from unstructured text data. It's essential because it helps us understand, categorize, and derive meaningful information from sources like social media, customer feedback, research papers, and more. For instance, it enables sentiment analysis to gauge public opinions, topic modeling for content organization, and efficient information retrieval from large datasets. In R, a popular choice for text analysis, you can use libraries like 'tm' and 'tidytext' to perform tasks like text preprocessing and visualizing word frequency, as demonstrated in the provided code. This skill empowers you to make data-driven decisions and save time by automating text processing tasks. Happy text mining!
+
+```{r}
+library(stringr)
+#All functions in stringr start with str_ and take a vector of strings as the first argument:
+
+x <- c("why", "video", "cross", "extra", "deal", "authority")
+str_length(x) 
+
+str_c(x, collapse = ", ")
+
+str_sub(x, 1, 2)
+
+#Most string functions work with regular expressions, a concise language for describing patterns of text. For example, the regular expression "[aeiou]" matches any single character that is a vowel:
+
+str_subset(x, "[aeiou]")
+
+str_count(x, "[aeiou]")
+
+#There are seven main verbs that work with patterns:
+
+# str_detect(x, pattern) tells you if there’s any match to the pattern:
+
+str_detect(x, "[aeiou]")
+
+#str_count(x, pattern) counts the number of patterns:
+
+str_count(x, "[aeiou]")
+
+#str_subset(x, pattern) extracts the matching components:
+
+str_subset(x, "[aeiou]")
+
+#str_locate(x, pattern) gives the position of the match:
+
+
+str_replace(x, "[aeiou]", "?")
+
+#str_split(x, pattern) splits up a string into multiple pieces:
+
+#fixed(): match exact bytes
+#coll(): match human letters
+#boundary(): match boundaries
+
+```
+
+[SEE MORE](https://stringr.tidyverse.org/)
+
+---
+
+
+### Random Forest in R
+The randomForest package in R is a highly popular and effective tool for implementing ensemble learning techniques and constructing models based on decision trees. By harnessing the power of random forests, this package excels in producing reliable and precise predictions, making it well-suited for tasks involving high-dimensional datasets. Its versatility extends to both classification and regression challenges, where it can significantly enhance the quality of predictions by combining insights from multiple decision trees.
+
+```{r include=FALSE}
+library(randomForest)
+
+```
+
+
+```{r}
+#library(randomForest)
+#library(ggplot2)
+
+set.seed(4543)
+data(mtcars)
+rf.fit <- randomForest(mpg ~ ., data=mtcars, ntree=1000,
+                       keep.forest=FALSE, importance=TRUE)
+
+```
+
+
+In R, random forest regression permits parameter experimentation, such as adjusting ntree and mtry to assess their effects on residuals and variance. Importance metrics encompass mean square error (MSE) and node purity. For reliable variable importance evaluation, prioritize MSE. In cases where predictors are exclusively numerical, prioritize MSE when metrics diverge. Visualize importance results using varImpPlot(), and for enhanced insights, create a combined plot that accentuates MSE outcomes, providing a comprehensive view of variable importance in random forest regression models.
+
+```{r}
+# Get variable importance from the model fit
+ImpData <- as.data.frame(importance(rf.fit))
+ImpData$Var.Names <- row.names(ImpData)
+
+ggplot(ImpData, aes(x=Var.Names, y=`%IncMSE`)) +
+  geom_segment( aes(x=Var.Names, xend=Var.Names, y=0, yend=`%IncMSE`), color="skyblue") +
+  geom_point(aes(size = IncNodePurity), color="blue", alpha=0.6) +
+  theme_light() +
+  coord_flip() +
+  theme(
+    legend.position="bottom",
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+[SEE MORE](https://hackernoon.com/random-forest-regression-in-r-code-and-interpretation)
+
