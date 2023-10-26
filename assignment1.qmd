@@ -40,30 +40,29 @@ I'm Sezer Turkmen, a full-stack developer, architect, and a lover of life. My mi
 
 [![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezerlucianturkmen/) [![Medium Badge](https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white&color=071A2C)](https://medium.com/@sezerlucianturkmen) [![Instagram Badge](https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white&color=071A2C)](https://www.instagram.com/sezer.who/)
 
----
+------------------------------------------------------------------------
 
 # \| DISCOVER THE POSIT
 
 ### YouTube Channel \| The open-source data science company for the individual, team and enterprise.
 
 ::: {style="text-align: center;"}
-<iframe width="680" height="430" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
+<iframe width="680" height="430" src="https://www.youtube.com/embed/Fja5DIN3uTw" frameborder="0" allowfullscreen style="display: inline-block;">
+
+</iframe>
 :::
 
 [*Teaching R online with RStudio Cloud*](https://www.youtube.com/watch?v=Fja5DIN3uTw&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=127)
 
 I chose to watch the video titled **"Mine Çetinkaya-Rundel \| Teaching R online with RStudio Cloud"** for two main reasons. Firstly, I was interested in learning about effective online teaching methods for the R programming language, commonly used in data science. The video delves into the benefits of using RStudio Cloud for teaching, emphasizing its user-friendly approach. Additionally, I was drawn to the fact that the presenter, Mine Çetinkaya-Rundel, shares a Turkish background with me, which added a unique cultural perspective to the subject matter. The presentation covers tips and best practices for using RStudio Cloud effectively in the classroom, as exporting and grading student work and sharing data files.
 
----
+------------------------------------------------------------------------
 
 # \| PROPOSE DATASET
 
 ### Most Streamed Spotify Songs 2023
 
-
 The 'Most Streamed Spotify Songs 2023' dataset is a fantastic choice for class demos. It offers insights into the music industry by showcasing popular songs and their attributes. Students can explore the science of hit songs, understand their impact through social media analysis, and learn about cross-platform music data. It's engaging and up-to-date, making it an excellent teaching resource.
-
-
 
 ```{r include=FALSE}
 
@@ -75,6 +74,7 @@ library(ggplot2)
 library(DT)
  
 ```
+
 ```{r most_streamed_spotify_song_2023, include=TRUE}
 # Use Google Drive to connect Dataset with library of 'googleDrive'
 id <- "1nM0Cr-gVFF9UjvxSZXHNfFnrDWIUoTHi"
@@ -94,18 +94,19 @@ DT::datatable(head(sorted_filtered_spotify_data), editable = list(
 ))
  
 ```
----
+
+------------------------------------------------------------------------
 
 *The* **Most Streamed Spotify Songs 2023** *dataset contains a comprehensive list of the most famous songs of 2023 as listed on Spotify. The dataset offers a wealth of features beyond what is typically available in similar datasets. It provides insights into each song's attributes, popularity, and presence on various music platforms. The dataset includes information such as track name, artist(s) name, release date, Spotify playlists and charts, streaming statistics, Apple Music presence, Deezer presence, Shazam charts, and various audio features.*
 
 [GO KAGGLE FOR THIS DATASET](https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/code)
 
----
+------------------------------------------------------------------------
 
 # \| LEARN THREE R POST
 
-
 ### Creating Stunning Visuals with ggplot2 and ggExtra
+
 Visualizing the distribution of data is essential for understanding it better. In R, you can use ggplot2 and ggExtra to create informative charts.
 
 ggplot2 is a popular tool for making all sorts of graphs. It's user-friendly and versatile, letting you customize your plots easily.
@@ -144,9 +145,10 @@ ggplot( mtcars , aes(x=mpg, y=wt)) +
 
 [SEE MORE](https://r-graph-gallery.com/)
 
----
+------------------------------------------------------------------------
 
-### Text Analysis || Text Mining in R
+### Text Analysis \|\| Text Mining in R
+
 Text analysis, or text mining, is a vital tool for extracting insights from unstructured text data. It's essential because it helps us understand, categorize, and derive meaningful information from sources like social media, customer feedback, research papers, and more. For instance, it enables sentiment analysis to gauge public opinions, topic modeling for content organization, and efficient information retrieval from large datasets. In R, a popular choice for text analysis, you can use libraries like 'tm' and 'tidytext' to perform tasks like text preprocessing and visualizing word frequency, as demonstrated in the provided code. This skill empowers you to make data-driven decisions and save time by automating text processing tasks. Happy text mining!
 
 ```{r}
@@ -195,17 +197,16 @@ str_replace(x, "[aeiou]", "?")
 
 [SEE MORE](https://stringr.tidyverse.org/)
 
----
-
+------------------------------------------------------------------------
 
 ### Random Forest in R
+
 The randomForest package in R is a highly popular and effective tool for implementing ensemble learning techniques and constructing models based on decision trees. By harnessing the power of random forests, this package excels in producing reliable and precise predictions, making it well-suited for tasks involving high-dimensional datasets. Its versatility extends to both classification and regression challenges, where it can significantly enhance the quality of predictions by combining insights from multiple decision trees.
 
 ```{r include=FALSE}
 library(randomForest)
 
 ```
-
 
 ```{r}
 #library(randomForest)
@@ -217,7 +218,6 @@ rf.fit <- randomForest(mpg ~ ., data=mtcars, ntree=1000,
                        keep.forest=FALSE, importance=TRUE)
 
 ```
-
 
 In R, random forest regression permits parameter experimentation, such as adjusting ntree and mtry to assess their effects on residuals and variance. Importance metrics encompass mean square error (MSE) and node purity. For reliable variable importance evaluation, prioritize MSE. In cases where predictors are exclusively numerical, prioritize MSE when metrics diverge. Visualize importance results using varImpPlot(), and for enhanced insights, create a combined plot that accentuates MSE outcomes, providing a comprehensive view of variable importance in random forest regression models.
 
@@ -238,5 +238,5 @@ ggplot(ImpData, aes(x=Var.Names, y=`%IncMSE`)) +
     axis.ticks.y = element_blank()
   )
 ```
-[SEE MORE](https://hackernoon.com/random-forest-regression-in-r-code-and-interpretation)
 
+[SEE MORE](https://hackernoon.com/random-forest-regression-in-r-code-and-interpretation)
