@@ -46,23 +46,26 @@ DT::datatable(head(sorted_filtered_spotify_data), editable = list(
 
 
 class(filtered_spotify_data$streams)
-# Convert character to numeric
+# Convert character to numeric , original r
 filtered_spotify_data$streams <- as.numeric(filtered_spotify_data$streams)
 
-# 1. Calculate the mean of all streams in the dataset
+# 1. The mean of all streams in the dataset
 mean_streams <- filtered_spotify_data %>%
   summarise(mean_streams = mean(streams, na.rm = TRUE))
 
-mean_streams
+print(mean_streams)
 
-# 2. Calculate the mean of streams for each month
+# 2. The mean of streams for each month
+month_names <- month.name
+
 mean_streams_by_month <- filtered_spotify_data %>%
   group_by(released_month) %>%
-  summarise(mean_streams = mean(streams, na.rm = TRUE))
-mean_streams_by_month
+  summarise(mean_streams = mean(streams, na.rm = TRUE)) %>%
+  mutate(released_month = month_names[as.numeric(released_month)])
 
-# 3. Transmute to create a new dataset with only selected columns
+print(mean_streams_by_month)
 
+# 3. Transmute mutate example
 spotify_data_millions <- filtered_spotify_data %>%
   mutate(streams_in_millions = streams / 1000000) %>%
   transmute(track_name, artist.s._name, released_year, streams_in_millions)
