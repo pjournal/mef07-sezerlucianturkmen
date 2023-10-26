@@ -41,7 +41,8 @@ DT::datatable(head(sorted_filtered_spotify_data), editable = list(
 ))
  
 ```
-
+---
+### Exercises
 ```{r  include=TRUE}
 
 
