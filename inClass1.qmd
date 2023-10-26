@@ -69,10 +69,10 @@ print(mean_streams_by_month)
 # 3. Transmute mutate example
 spotify_data_millions <- filtered_spotify_data %>%
   mutate(streams_in_millions = streams / 1000000) %>%
-  transmute(track_name, artist.s._name, released_year, streams_in_millions)
-head(spotify_data_millions)
+  transmute(track_name, artist.s._name, released_year, streams_in_millions) %>%
+  arrange(desc(streams_in_millions))
 
-
+print(head(spotify_data_millions))
 
 
 
