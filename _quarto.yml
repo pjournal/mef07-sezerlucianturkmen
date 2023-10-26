@@ -8,13 +8,14 @@ book:
   chapters:
     - index.qmd
     - assignment1.qmd
+    - inClass1.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]
+  
 
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+  
 

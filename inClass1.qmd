@@ -1,0 +1,11 @@
+---
+title: "In Class 1"
+author: "Sezer Turkmen"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+editor: visual
+---
