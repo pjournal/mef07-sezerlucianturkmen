@@ -55,12 +55,17 @@ class(filtered_spotify_data$streams)
 filtered_spotify_data$streams <- as.numeric(filtered_spotify_data$streams)
 
 # 1. Distribution of Musical Features
-gathered_data <- gather(filtered_spotify_data, key = "feature", value = "percentage",
-                        danceability_., valence_., energy_., acousticness_., instrumentalness_.)
 
-ggplot(gathered_data, aes(x = feature, y = percentage, fill = feature)) +
+ordered_filtered_data <- filtered_spotify_data[order(-filtered_spotify_data$streams), ]
+
+top100_streams_data <- head(ordered_filtered_data, 100)
+
+gathered_top100_data <- gather(top100_streams_data, key = "feature", value = "percentage",
+                                danceability_., valence_., energy_., acousticness_., instrumentalness_.)
+
+ggplot(gathered_top100_data, aes(x = feature, y = percentage, fill = feature)) +
   geom_bar(stat = "identity", position = "dodge", color = "black") +
-  labs(title = "Distribution of Musical Features",
+  labs(title = "Distribution of Musical Features (Top 100 Streams)",
        x = "Musical Features",
        y = "Percentage",
        fill = "Feature") +
