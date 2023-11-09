@@ -86,7 +86,7 @@ top_artists <- filtered_spotify_data %>%
   top_n(10, total_streams)
 
 ggplot(top_artists, aes(x = reorder(artist.s._name, total_streams), y = total_streams, fill = artist.s._name)) +
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 2) +
   labs(title = "Dot Plot for Top 10 Artists with Highest Streams",
        x = "Artist",
        y = "Total Streams",
