@@ -18,10 +18,10 @@ library(shiny)
 shiny::runGitHub("pjournal/mef07-sezerlucianturkmen", subdir = "/app/app.R")
 ```
 
-## Shiny Spotiy Link
+## Shiny Spotify Link
 Hello, you can access directly Shiny Spoty application by link below.
 
-[SHINY SPOTY](https://sezerlucianturkmen.shinyapps.io/shinyspoty/)
+[SHINY SPOTIFY](https://sezerlucianturkmen.shinyapps.io/shinyspoty/)
 
 ---
 
