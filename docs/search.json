@@ -35,10 +35,10 @@
     "text": "4.1 Shiny App: Spotify Data Exploration\nThis Shiny app explores Spotify data, focusing on trends in various music features over the years. The data source is a dataset containing information on streams, release years, and different music attributes.\nYou can run my shiny app using the following command.\n\nlibrary(shiny)\nshiny::runGitHub(\"pjournal/mef07-sezerlucianturkmen\", subdir = \"/app/app.R\")"
   },
   {
-    "objectID": "assignment_shiny.html#shiny-spotiy-link",
-    "href": "assignment_shiny.html#shiny-spotiy-link",
+    "objectID": "assignment_shiny.html#shiny-spotify-link",
+    "href": "assignment_shiny.html#shiny-spotify-link",
     "title": "4  Assignment: Shiny",
-    "section": "4.2 Shiny Spotiy Link",
-    "text": "4.2 Shiny Spotiy Link\nHello, you can access directly Shiny Spoty application by link below.\nSHINY SPOTY\n\nAlso, you can try the app on Shinyapps."
+    "section": "4.2 Shiny Spotify Link",
+    "text": "4.2 Shiny Spotify Link\nYou can run my Shiny app by clicking on the image below:\n\n\n\n\n\n\nAlso, you can try the app on Shinyapps."
   }
 ]
