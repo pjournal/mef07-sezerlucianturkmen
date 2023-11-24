@@ -1,0 +1,28 @@
+---
+title: "Assignment: Shiny"
+date: "2023-11-2023"
+---
+
+## Shiny App: Spotify Data Exploration
+
+This Shiny app explores Spotify data, focusing on trends in various music features over the years. The data source is a dataset containing information on streams, release years, and different music attributes.
+
+
+You can run my shiny app using the following command.
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(shiny)
+shiny::runGitHub("pjournal/mef07-sezerlucianturkmen", subdir = "/app/app.R")
+```
+
+## Shiny Spotiy Link
+Hello, you can access directly Shiny Spoty application by link below.
+
+[SHINY SPOTY](https://sezerlucianturkmen.shinyapps.io/shinyspoty/)
+
+---
+
+Also, you can try the app on [Shinyapps](https://www.shinyapps.io/).

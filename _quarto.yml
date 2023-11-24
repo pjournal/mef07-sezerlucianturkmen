@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: docs
+  render:
+    ["!app/"]
 
 book:
   title: "SEZER TURKMEN Progress Journal"
@@ -10,6 +12,7 @@ book:
     - assignment1.qmd
     - inClass1.qmd
     - inClass2.qmd
+    - assignment_shiny.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]

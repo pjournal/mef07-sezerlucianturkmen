@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SEZER TURKMEN Progress Journal</title>
+<title>SEZER TURKMEN Progress Journal - 4&nbsp; Assignment: Shiny</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assignment1.html" rel="next">
+<link href="./inClass2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./assignment_shiny.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Assignment: Shiny</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -144,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./assignment_shiny.html" class="sidebar-item-text sidebar-link">
+  <a href="./assignment_shiny.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Assignment: Shiny</span></span></a>
   </div>
 </li>
@@ -158,7 +192,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#shiny-app-spotify-data-exploration" id="toc-shiny-app-spotify-data-exploration" class="nav-link active" data-scroll-target="#shiny-app-spotify-data-exploration"><span class="header-section-number">4.1</span> Shiny App: Spotify Data Exploration</a></li>
+  <li><a href="#shiny-spotiy-link" id="toc-shiny-spotiy-link" class="nav-link" data-scroll-target="#shiny-spotiy-link"><span class="header-section-number">4.2</span> Shiny Spotiy Link</a></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SEZER TURKMEN Progress Journal</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Assignment: Shiny</span></h1>
 </div>
 
 
@@ -175,6 +210,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Invalid Date</p>
+    </div>
+  </div>
   
     
   </div>
@@ -182,21 +223,21 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<!-- DO NOT TOUCH THIS PART EXCEPT FILLING YOUR OR YOUR GROUP's NAME -->
-<p>This progress journal covers SEZER TURKMEN / PROJECT GROUP NAME’s work during their term at <a href="https://mef-bda503.github.io/fall23/">BDA 503 Fall 2023</a>.</p>
-<p>Each section is an assignment or an individual work.</p>
-<!-- IF THIS IS A GROUP UNCOMMENT BELOW -->
-<!-- # Group Members
-
-+ [Member 1](Member 1's Progress Journal URL with https://)  
-+ [Member 2](Member 2's Progress Journal URL with https://)
-+ [Member 3](Member 3's Progress Journal URL with https://)
-
-# Group Project Details
-
-Our group project is [PROJECT NAME]. [SHORT DESCRIPTION] -->
+<section id="shiny-app-spotify-data-exploration" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="shiny-app-spotify-data-exploration"><span class="header-section-number">4.1</span> Shiny App: Spotify Data Exploration</h2>
+<p>This Shiny app explores Spotify data, focusing on trends in various music features over the years. The data source is a dataset containing information on streams, release years, and different music attributes.</p>
+<p>You can run my shiny app using the following command.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span><span class="fu">runGitHub</span>(<span class="st">"pjournal/mef07-sezerlucianturkmen"</span>, <span class="at">subdir =</span> <span class="st">"/app/app.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="shiny-spotiy-link" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="shiny-spotiy-link"><span class="header-section-number">4.2</span> Shiny Spotiy Link</h2>
+<p>Hello, you can access directly Shiny Spoty application by link below.</p>
+<p><a href="https://sezerlucianturkmen.shinyapps.io/shinyspoty/">SHINY SPOTY</a></p>
+<hr>
+<p>Also, you can try the app on <a href="https://www.shinyapps.io/">Shinyapps</a>.</p>
 
 
 </section>
@@ -437,11 +478,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./inClass2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">In Class 2</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./assignment1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 1</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
