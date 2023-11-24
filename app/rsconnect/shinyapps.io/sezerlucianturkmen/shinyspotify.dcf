@@ -1,12 +1,12 @@
-name: shinyspoty
-title: shinyspoty
+name: shinyspotify
+title: shinyspotify
 username: sezerlucianturkmen
 account: sezerlucianturkmen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 10616281
-bundleId: 7965049
-url: https://sezerlucianturkmen.shinyapps.io/shinyspoty/
+appId: 10618281
+bundleId: 7965067
+url: https://sezerlucianturkmen.shinyapps.io/shinyspotify/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE

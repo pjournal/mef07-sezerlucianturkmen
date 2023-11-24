@@ -24,7 +24,7 @@ shiny::runGitHub("pjournal/mef07-sezerlucianturkmen", subdir = "/app/app.R")
 ## Shiny Spotify Link
 You can run my Shiny app by clicking on the image below:
 
-[![](https://i.stack.imgur.com/vqF0X.jpg)](https://sezerlucianturkmen.shinyapps.io/shinyspoty/)
+[![](https://i.stack.imgur.com/vqF0X.jpg)](https://sezerlucianturkmen.shinyapps.io/shinyspotify/)
 
 
 

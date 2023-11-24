@@ -15,6 +15,7 @@ if(length(pti)>0){
 library(shiny)
 library(tidyverse)
 library(ggplot2movies)
+library(plotly)
 
 # Prepare data
 # Use Google Drive to connect Dataset with library of 'googleDrive'
@@ -47,7 +48,7 @@ music_types <- c( "danceability", "valence", "energy", "acousticness", "instrume
 ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
-      sliderInput("released_year", "Year Filter", min = min(shiny_spotify_set$released_year), max = max(shiny_spotify_set$released_year), value = c(2000, 2023), step = 1, sep = ""),
+      sliderInput("released_year", "Year Filter", min = 2000, max = max(shiny_spotify_set$released_year), value = c(2000, 2023), step = 1, sep = ""),
       sliderInput("streams", "Stream filter", min = 0, max = max(shiny_spotify_set$streams), value = c(0, max(shiny_spotify_set$streams))),
       selectInput("music_type", "Music Features", choices = c("All", music_types), selected = c("danceability","energy"), multiple = TRUE)
     ),
@@ -59,6 +60,10 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   output$spotify_plot <- renderPlot({
+    
+    spotify_plot <- plotly_build(qplot(1:10))
+    spotify_plot$elementId <- NULL
+    
     my_df <- shiny_spotify_set %>% 
       filter(released_year >= input$released_year[1] & released_year <= input$released_year[2] & streams >= input$streams[1]& streams <= input$streams[2])
     
@@ -83,7 +88,7 @@ server <- function(input, output) {
     
     ggplot(my_df, aes(x = released_year, y = mean_value, color = music_type)) + 
       geom_point(alpha = 0.4, size = 6) +
-      geom_point(aes(y = mean_value - 0.1), color = "black", alpha = 1,  size = 0.5) +  
+      geom_point(aes(y = mean_value ), color = "black",  size = 0.5) +  
       labs(title = "Spotify Data",
            x = "Released Year",                  # X-axis label
            y = "Mean Value",                     # Y-axis label
@@ -95,8 +100,8 @@ server <- function(input, output) {
   })
 
 }
-# Increase the maximum upload size to 160 MB 
-options(shiny.maxRequestSize = 200*1024^2)
+# Increase the maximum upload size to 200 MB 
+options(shiny.maxRequestSize = 500*1024^2)
 options(rsconnect.packrat = TRUE)
 
 # Run the application 
