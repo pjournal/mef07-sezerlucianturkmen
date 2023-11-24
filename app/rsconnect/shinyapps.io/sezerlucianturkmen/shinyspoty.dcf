@@ -5,7 +5,7 @@ account: sezerlucianturkmen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10616281
-bundleId: 7964128
+bundleId: 7964785
 url: https://sezerlucianturkmen.shinyapps.io/shinyspoty/
 version: 1
 asMultiple: FALSE
