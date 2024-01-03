@@ -2,7 +2,7 @@
 
 <!-- DO NOT TOUCH THIS PART EXCEPT FILLING YOUR OR YOUR GROUP's NAME -->
 
-This progress journal covers SEZER TURKMEN / PROJECT GROUP NAME's work during their term at [BDA 503 Fall 2023](https://mef-bda503.github.io/fall23/).
+This progress journal covers SEZER TURKMEN / YELLOW SUBMARINE's work during their term at [BDA 503 Fall 2023](https://mef-bda503.github.io/fall23/).
 
 Each section is an assignment or an individual work.
 

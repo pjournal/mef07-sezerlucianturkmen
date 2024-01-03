@@ -41,11 +41,12 @@ DT::datatable(head(sorted_filtered_spotify_data), editable = list(
 ))
  
 ```
----
+
+------------------------------------------------------------------------
+
 ### Exercises for GGPLOT2
 
 Practising the GGPLOT2, visualize Spotify data with three exercises. First, a bar chart illustrates the distribution of musical features. Second, a line plot depicts stream trends over time. Lastly, a dot plot showcases the top 10 artists with the highest streams, offering insights into their popularity.
-
 
 ```{r  include=TRUE}
 
