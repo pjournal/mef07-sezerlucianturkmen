@@ -6,6 +6,10 @@ This progress journal covers SEZER TURKMEN / YELLOW SUBMARINE's work during thei
 
 Each section is an assignment or an individual work.
 
+
+![](mycover.jpg){fig-align="center" width="1000"} 
+
+
 <!-- IF THIS IS A GROUP UNCOMMENT BELOW -->
 
 <!-- # Group Members

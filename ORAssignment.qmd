@@ -15,29 +15,31 @@ editor: visual
 </iframe>
 :::
 
-
 ## Business Situation
-Copenhagen Airport (CPH) faced a challenge similar to finding parking in a busy lot, but with aircraft stands. The airport needed to maximize the use of existing stands and plan for future expansion cost-effectively. Each new stand cost $10M USD (30M-50M DDK), prompting the need for a precise optimization strategy.
+
+Copenhagen Airport (CPH) faced a challenge similar to finding parking in a busy lot, but with aircraft stands. The airport needed to maximize the use of existing stands and plan for future expansion cost-effectively. Each new stand cost \$10M USD (30M-50M DDK), prompting the need for a precise optimization strategy.
 
 ## Building the Model
+
 The Operational Research (OR) team at CPH developed a detailed optimization model, moving away from traditional top-down analyses. They incorporated operational requirements and restrictions into the model, considering hard constraints (specific aircraft types for certain stands) and softer preferences (airlines' proximity preferences). The mathematical model was constructed in two months using the Gurobi C++ API.
 
 ## Results
-Gurobi efficiently found solutions, offering valuable insights and identifying areas for refinement. The model, with additional operational details, enabled quick what-if analyses for decision trade-offs. The optimized plan recommended by the model led to investments totaling over $70M USD ($400M DDK) in new stands and gates.
+
+Gurobi efficiently found solutions, offering valuable insights and identifying areas for refinement. The model, with additional operational details, enabled quick what-if analyses for decision trade-offs. The optimized plan recommended by the model led to investments totaling over \$70M USD (\$400M DDK) in new stands and gates.
 
 ## Benefits
 
-1. **Cost Savings:** Gurobi's model led to $79M USD in savings by optimizing stand assignments and guiding strategic investments.
+1.  **Cost Savings:** Gurobi's model led to \$79M USD in savings by optimizing stand assignments and guiding strategic investments.
 
-2. **Efficient Utilization:** Gurobi maximized existing stand usage, ensuring precise allocation based on aircraft types and airlines' preferences for improved efficiency.
+2.  **Efficient Utilization:** Gurobi maximized existing stand usage, ensuring precise allocation based on aircraft types and airlines' preferences for improved efficiency.
 
-3. **Quick Decision-Making:** Gurobi's fast solutions facilitated swift decision-making, enabling the team to adapt to changing scenarios effectively.
+3.  **Quick Decision-Making:** Gurobi's fast solutions facilitated swift decision-making, enabling the team to adapt to changing scenarios effectively.
 
-4. **Flexibility and Adaptability:** The model easily adapted to operational changes, accommodating soft preferences and ensuring efficient decision-making.
+4.  **Flexibility and Adaptability:** The model easily adapted to operational changes, accommodating soft preferences and ensuring efficient decision-making.
 
-5. **Strategic Planning:** The optimized plan not only addressed current challenges but also served as a guide for future expansions, ensuring long-term sustainability.
+5.  **Strategic Planning:** The optimized plan not only addressed current challenges but also served as a guide for future expansions, ensuring long-term sustainability.
 
-6. **User-Friendly Interface:** Leveraging Excel made the process user-friendly, enhancing collaboration and integration into existing workflows.
+6.  **User-Friendly Interface:** Leveraging Excel made the process user-friendly, enhancing collaboration and integration into existing workflows.
 
 ## Reference
 
